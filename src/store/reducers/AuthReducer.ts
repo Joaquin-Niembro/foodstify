@@ -1,4 +1,4 @@
-import {SIGN_UP_SUCCESS, SIGN_UP_FAILURE} from '../types';
+import {SIGN_UP_SUCCESS, SIGN_UP_FAILURE, SIGN_OUT} from '../types';
 const initialState = {
   user: null,
 };
@@ -9,6 +9,10 @@ function AuthReducer(state = initialState, action: any) {
         user: action.payload,
       };
     case SIGN_UP_FAILURE:
+      return {
+        user: null,
+      };
+    case SIGN_OUT:
       return {
         user: null,
       };

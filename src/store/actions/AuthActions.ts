@@ -24,7 +24,11 @@ export function sign_up_fectch(user: MyFormValues) {
     payload: user,
   };
 }
-
+export function sign_out_fetch() {
+  return {
+    type: SIGN_OUT,
+  };
+}
 export function sign_up_err() {
   return {
     type: SIGN_UP_FAILURE,
