@@ -26,7 +26,7 @@ const Home: React.FC<{
   useEffect(() => {
     get_restaurants_fetch();
   }, []);
-  
+
   return (
     <View style={HomeStyles.container}>
       <View style={HomeStyles.upLevel}>
@@ -43,9 +43,9 @@ const Home: React.FC<{
           </TouchableOpacity>
         )}
       </View>
-      {Restaurants && <HorizontalRestaurantsMenu Restaurants={Restaurants} />}
+      {Restaurants && <HorizontalRestaurantsMenu Restaurants={Restaurants} navigation={navigation} />}
       <Text style={HomeStyles.recommendedText}>Recommended</Text>
-      {Restaurants && <RecommendedList Recommended={Restaurants} />}
+      {Restaurants && <RecommendedList Recommended={Restaurants} navigation={navigation} />}
     </View>
   );
 };

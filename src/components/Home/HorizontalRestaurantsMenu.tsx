@@ -4,7 +4,8 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const HorizonatlRestaurantsMenu: React.FC<{
   Restaurants: any[];
-}> = ({Restaurants}) => {
+  navigation: any;
+}> = ({Restaurants, navigation}) => {
   return (
     <View>
       <FlatList
@@ -13,7 +14,8 @@ const HorizonatlRestaurantsMenu: React.FC<{
         keyExtractor={e => e.id}
         renderItem={({item}) => (
           <TouchableOpacity
-            style={[styles.itemContainer, {backgroundColor: item._data.bc}]}>
+            style={[styles.itemContainer, {backgroundColor: item._data.bc}]}
+            onPress={() => navigation.navigate('Details', {Item: item._data})}>
             <View
               style={{
                 backgroundColor: '#5b6259',

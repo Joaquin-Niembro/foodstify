@@ -19,7 +19,6 @@ import {
 import {Formik} from 'formik';
 import {connect} from 'react-redux';
 import {sign_up_fectch} from '@src/store/actions';
-import {useEffectAfterMount} from '@src/hooks';
 
 interface MyFormValues {
   name: string;
@@ -32,12 +31,6 @@ const SignUp: React.FC<{
   sign_up_fectch: any;
   Auth: any;
 }> = ({navigation, sign_up_fectch, Auth}) => {
-  useEffectAfterMount(() => {
-    if (Auth.user) {
-      navigation.navigate('HomeNav');
-    }
-  }, [Auth]);
-
   const initialValues: MyFormValues = {
     name: '',
     email: '',

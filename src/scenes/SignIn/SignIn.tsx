@@ -18,7 +18,7 @@ import Line from '@src/components/SignUp/Line';
 import {Formik} from 'formik';
 import {connect} from 'react-redux';
 import {sign_in_fetch} from '@src/store/actions';
-import {useEffectAfterMount} from '@src/hooks';
+
 interface MyFormValues {
   email: string;
   password: string;
@@ -28,12 +28,6 @@ const SignIn: React.FC<{
   sign_in_fetch: any;
   Auth: any;
 }> = ({navigation, sign_in_fetch, Auth}) => {
-  useEffectAfterMount(() => {
-    if (Auth.user) {
-      navigation.navigate('HomeNav');
-    }
-  }, [Auth]);
-
   const initialValues: MyFormValues = {
     email: '',
     password: '',

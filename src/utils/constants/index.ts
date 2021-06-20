@@ -7,4 +7,6 @@ export const Constants = {
   subtitle3: 'Welcome back,',
   subtitle4: 'Sign in to continue',
   accountAffirm: 'Don´t have an account?',
+  title3: 'Prom',
+  title4: 'otions',
 };

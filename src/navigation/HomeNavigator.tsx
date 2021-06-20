@@ -1,9 +1,10 @@
 import React from 'react';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
-import Home from '@src/scenes/Home/Home';
+import Home from './HomeStack';
 import Promotions from '@src/scenes/Promotions/Promotions';
 import Menus from '@src/scenes/Menus/Menus';
 import Profile from '@src/scenes/Profile/Profile';
+
 import {
   homeIconControlProps,
   promoIconControlProps,
@@ -20,7 +21,7 @@ function HomeNavigator() {
       activeColor={Colors.darker}
       inactiveColor={Colors.darkerBlue}
       barStyle={{backgroundColor: Colors.lightBlue}}
-      initialRouteName="Home">
+      initialRouteName="Promotions">
       <Tab.Screen
         name="Home"
         component={Home}
