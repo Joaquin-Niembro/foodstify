@@ -13,7 +13,8 @@ const RecommendeList: React.FC<{
   Recommended: any[];
   navigation: any;
   Promotions?: Boolean;
-}> = ({Recommended, navigation, Promotions = false}) => {
+  menus?: Boolean;
+}> = ({Recommended, navigation, Promotions = false, menus = false}) => {
   const RecommendedRestaurants = Recommended.filter(
     e => e._data.recommended === true,
   );
@@ -30,7 +31,11 @@ const RecommendeList: React.FC<{
             onPress={() => navigation.navigate('Details', {Item: item._data})}>
             <Image
               source={{
-                uri: Promotions ? item._data.promotion : item._data.logo,
+                uri: Promotions
+                  ? item._data.promotion
+                  : menus
+                  ? item._data.menu
+                  : item._data.logo,
               }}
               style={{width: 250, height: 230, borderRadius: 5}}
             />

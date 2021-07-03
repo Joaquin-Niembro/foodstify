@@ -20,8 +20,7 @@ function HomeNavigator() {
     <Tab.Navigator
       activeColor={Colors.darker}
       inactiveColor={Colors.darkerBlue}
-      barStyle={{backgroundColor: Colors.lightBlue}}
-      initialRouteName="Promotions">
+      barStyle={{backgroundColor: Colors.lightBlue}}>
       <Tab.Screen
         name="Home"
         component={Home}
