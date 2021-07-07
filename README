@@ -1,0 +1,6 @@
+1 git clone repository (open repo in code editor)
+2 npm install
+3 npm run start
+4 npm run android
+
+Firebase connection will be established as soon as the app runs.
